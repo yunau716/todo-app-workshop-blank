@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Todo App</title>
+</head>
+<body>
+    <h1>Todo List</h1>
+    <form action="{{ url_for('---') }}" method="post">
+        <input type="text" name="todo" required>
+        <button type="submit">Add Todo</button>
+    </form>
+    <ul>
+    {% for todo in todos %}
+        <li>
+            {{ todo }}
+            <a href="{{ url_for('------', index=loop.index0) }}">Delete</a>
+        </li>
+    {% endfor %}
+    </ul>
+</body>
+</html>
